@@ -1,21 +1,14 @@
 package command;
 
-import java.util.ArrayList;
-import main.Main;
+public class DeleteCommand extends Command {
 
-public class DeleteCommand {
-    public Main main;
-
-    public DeleteCommand(Main main) {
-        this.main = main;
+    public DeleteCommand() {
+        super("delete-transaction", "delete transaction");
     }
 
-    public void raderaTransaktion(ArrayList<Transaktion> transaktioner, int index) {
-        if (index >= 0 && index < transaktioner.size()) {
-            transaktioner.remove(index);
-            System.out.println("Transaktionen har tagits bort.");
-        } else {
-            System.out.println("Ogiltigt transaktionsnummer.");
-        }
+    @Override
+    public void execute(String[] commandArgs) {
+
     }
+
 }
