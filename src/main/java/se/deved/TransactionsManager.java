@@ -37,7 +37,7 @@ public class TransactionsManager {
         System.out.println("Nuvarande saldo på kontot är: " + saldo + " kr");
     }
 
-    public static ArrayList<Transaction> getTransaktioner() {
+    public static ArrayList<Transaction> getTransactioner() {
         return transactioner;
     }    
 }
