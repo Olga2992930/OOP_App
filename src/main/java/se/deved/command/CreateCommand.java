@@ -2,7 +2,9 @@ package se.deved.command;
 
 import java.util.Scanner;
 import java.util.Date;
+
 import se.deved.Application;
+import se.deved.Transaction;
 import se.deved.TransactionsManager;
 import se.deved.utility.StringToDate;
 
@@ -14,6 +16,8 @@ public class CreateCommand extends Command {
 
     @Override
     public void execute(String[] commandArgs) {
+
+
         TransactionsManager manager = new TransactionsManager();
         Scanner scanner = new Scanner(System.in);
         System.out.print("Beskriv transaktionen: ");
@@ -30,9 +34,19 @@ public class CreateCommand extends Command {
             return;
         }
 
+
+        Transaction transaction = new Transaction(beskrivning, belopp, datum);
+        
+
         manager.läggTillTransaction(beskrivning, belopp, datum);
-       // System.out.println("______________________________________________________________");
+        //System.out.println("______________________________________________________________");
         //System.out.println("Kör vidare! ('create'/'balance'/'delete'/'expenses'/'income'/'help'/'stop')");
-       
+        try {
+            application.getTransactionManager().save(transaction);
+            System.out.println("Sparade transaction '" + transaction.beskrivning + "'.");
+        } catch (Exception exception) {
+            exception.printStackTrace();
+            System.out.println("Kunde inte spara transaction. Försök igen.");
+        }
     }
 }

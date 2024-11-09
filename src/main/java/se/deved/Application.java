@@ -25,11 +25,19 @@ import java.util.Scanner;
 public class Application {
 
     private MenuManager menuManager;
+    private SaveManager saveManager;
     private boolean running;
 
     public Application() {
         this.menuManager = new SimpleMenuManager(this);
         this.running = true; 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Vill du använda 'list' eller 'file'?");
+        if (scanner.nextLine().equalsIgnoreCase("list")) {
+            this.saveManager = new ListManager();
+        } else {
+            this.saveManager = new FileManager();
+        }
     }
 
     public static void main(String[] args) {
@@ -51,5 +59,9 @@ public class Application {
 
     public void stop() {
         this.running = false;
+    }
+
+    public SaveManager getTransactionManager() {
+        return saveManager;
     }
 }
