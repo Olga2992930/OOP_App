@@ -1,6 +1,4 @@
-package se.deved.command;
-
-import se.deved.Transaction;
+package se.deved;
 
 public interface SaveManager {
     void save(Transaction transaction);
