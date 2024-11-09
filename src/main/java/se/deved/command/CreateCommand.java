@@ -31,8 +31,8 @@ public class CreateCommand extends Command {
         }
 
         manager.läggTillTransaction(beskrivning, belopp, datum);
-        System.out.println("______________________________________________________________");
-        System.out.println("Kör vidare! ('create'/'balance'/'delete'/'expenses'/'income'/'help'/'stop')");
+       // System.out.println("______________________________________________________________");
+        //System.out.println("Kör vidare! ('create'/'balance'/'delete'/'expenses'/'income'/'help'/'stop')");
        
     }
 }

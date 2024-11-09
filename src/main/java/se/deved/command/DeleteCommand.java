@@ -16,17 +16,17 @@ public class DeleteCommand extends Command {
         Scanner scanner = new Scanner(System.in);
         TransactionsManager manager = new TransactionsManager();
         manager.visaAllaTransactioner();
+
         if (!manager.getTransactioner().isEmpty()) {
             System.out.print("Ange transaktionsnumret att ta bort: ");
             int numret = scanner.nextInt() - 1;
-            // delete
-            if (numret >= 0 && numret <manager.getTransactioner().size()) {
+            if (numret >= 0 && numret < manager.getTransactioner().size()) {
                 manager.getTransactioner().remove(numret);
-            System.out.println("Transaktionen har tagits bort.");
+                System.out.println("Transaktionen har tagits bort.");
             } else {
-            System.out.println("Ogiltigt transaktionsnummer.");
+                System.out.println("Ogiltigt transaktionsnummer.");
             }
-            //delete
+
             manager.visaAllaTransactioner();
 
         }
