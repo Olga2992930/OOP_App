@@ -4,7 +4,6 @@ import se.deved.menu.Menu;
 import se.deved.menu.UserMenu;
 
 public class SimpleMenuManager implements MenuManager {
-
     private Menu menu;
 
     public SimpleMenuManager(Application application) {

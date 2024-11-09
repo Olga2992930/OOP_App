@@ -38,6 +38,7 @@ public class Application {
         } else {
             this.saveManager = new FileManager();
         }
+        System.out.println("Skriv 'help' för en lista på kommandon.");
     }
 
     public static void main(String[] args) {

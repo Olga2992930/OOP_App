@@ -2,7 +2,6 @@ package se.deved.menu;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import se.deved.Application;
 import se.deved.command.Command;
 import se.deved.command.CommandManager;

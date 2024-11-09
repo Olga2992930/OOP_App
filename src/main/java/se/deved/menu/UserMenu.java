@@ -18,12 +18,11 @@ public class UserMenu extends Menu {
         registerCommand(new IncomeCommand(application));
         registerCommand(new ExpensesCommand(application));
         registerCommand(new StopCommand(application));
-        
     }
 
     @Override
     public void display() {
         System.out.println("Välkommen till din personliga finance app!");
-        System.out.println("Skriv 'help' för en lista på kommandon.");
+        //System.out.println("Skriv 'help' för en lista på kommandon.");
     }
 }

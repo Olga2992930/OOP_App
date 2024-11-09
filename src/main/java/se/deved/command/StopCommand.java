@@ -12,6 +12,5 @@ public class StopCommand extends Command {
     public void execute(String[] commandArgs) {
         application.stop();
         System.out.println("Applikationen avslutas...");
-     
     }
 }

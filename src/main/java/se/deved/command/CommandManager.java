@@ -1,3 +1,4 @@
+
 package se.deved.command;
 
 public interface CommandManager {

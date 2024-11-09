@@ -1,7 +1,6 @@
 package se.deved.command;
 
 import java.util.Scanner;
-
 import se.deved.Application;
 import se.deved.TransactionsManager;
 
